@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import bg from "../../assets/background.jpg";
 import ServerLogo from "../../assets/server_logo.png";
+import DailyTip from "./DailyTip";
 
 function formatStage(stage) {
   if (!stage) return "Initializing";
@@ -43,14 +44,14 @@ export default function Loadscreen() {
 
       <div className="absolute left-6 top-6 select-none">
         <span className="text-[11px] tracking-[0.22em] text-white/70">
-          POWERED BY MYTHIC FRAMEWORK
+          POWERED BY <span className="text-brand-light">MYTHIC FRAMEWORK</span>
         </span>
       </div>
 
       <div className="absolute right-6 top-6 flex items-center gap-3">
         <a
           href="#"
-          className="group inline-flex items-center gap-2 rounded-lg border border-white/10 bg-black/30 px-3 py-2 text-xs text-white/80 backdrop-blur hover:border-white/20 hover:text-white"
+          className="group inline-flex items-center gap-2 rounded-lg border border-brand-main/35 bg-black/30 px-3 py-2 text-xs text-white/80 backdrop-blur hover:border-white/20 hover:text-white"
           onClick={(e) => e.preventDefault()}
         >
           <FontAwesomeIcon
@@ -61,7 +62,7 @@ export default function Loadscreen() {
         </a>
         <a
           href="#"
-          className="group inline-flex items-center gap-2 rounded-lg border border-white/10 bg-black/30 px-3 py-2 text-xs text-white/80 backdrop-blur hover:border-white/20 hover:text-white"
+          className="group inline-flex items-center gap-2 rounded-lg border border-brand-main/35 bg-black/30 px-3 py-2 text-xs text-white/80 backdrop-blur hover:border-white/20 hover:text-white"
           onClick={(e) => e.preventDefault()}
         >
           <FontAwesomeIcon
@@ -119,10 +120,12 @@ export default function Loadscreen() {
         </div>
       </div>
 
+      <DailyTip />
+
       {priority > 0 && priorityMessage ? (
-        <div className="absolute bottom-[72px] right-6 w-[360px] max-w-[calc(100vw-48px)] rounded-2xl border border-white/10 bg-black/35 p-4 backdrop-blur">
+        <div className="absolute bottom-[72px] right-6 w-[360px] max-w-[calc(100vw-48px)] rounded-2xl border border-brand-main/35 bg-black/35 p-4 backdrop-blur shadow-brand-main-sm">
           <div className="flex items-center justify-between gap-3">
-            <div className="stage-mono text-xs tracking-wider text-white/60">
+            <div className="stage-mono text-xs tracking-wider text-brand-main">
               PRIORITY BOOST
             </div>
             <div className="stage-mono text-xs text-white/80">
@@ -140,7 +143,7 @@ export default function Loadscreen() {
       <div className="absolute bottom-0 left-0 right-0 px-6 pb-6 select-none">
         <div className="flex items-center justify-between text-xs">
           <div className="stage-mono tracking-wider text-white/60">
-            // LOADING
+            <span className="text-brand-main">//</span> LOADING
           </div>
 
           <div className="flex items-center gap-4">
