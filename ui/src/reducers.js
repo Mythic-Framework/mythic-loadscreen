@@ -1,8 +1,8 @@
-import { combineReducers } from 'redux';
+import { combineReducers } from "redux";
 
-import loadReducer from 'containers/Loadscreen/reducer';
+import loadReducer from "containers/Loadscreen/reducer";
 
 export default () =>
-	combineReducers({
-		load: loadReducer,
-	});
+  combineReducers({
+    load: loadReducer,
+  });

@@ -1,26 +1,31 @@
-# fivem-react-boilerplate
+# Mythic Loadscreen (Vite + Tailwind)
 
-# Quick start
-### 1. Clone repo
-```
-git clone https://github.com/2277/fivem-react-boilerplate.git html
-```
+This resource uses a Vite + React + Tailwind UI that builds to `ui/html` for FiveM NUI loadscreen usage.
 
-### 2. Install dependencies
-```
-cd html
+## Requirements
+- Node.js 18+ (recommended)
+- pnpm / npm / yarn (any is fine)
+
+## Install
+```bash
+cd ui
 npm install
 ```
 
-### 3. Build
+## Development (browser preview)
+```bash
+npm run dev
 ```
+
+Note: FiveM loadscreens do not use the Vite dev server. For in-game testing, use a production build.
+
+## Build (FiveM)
+```bash
 npm run build
 ```
 
-### 4. Copy the contents of the generated manifest to your resource manifest!
+Output goes to:
+- `ui/html/index.html`
+- `ui/html/assets/*`
 
-# Commands
-### Run locally for development
-```
-npm run start
-```
+Those files are referenced by `fxmanifest.lua`.
